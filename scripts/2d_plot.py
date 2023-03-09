@@ -22,7 +22,7 @@ while True:
    
 # グラフを表示
 #plt.show()
-  plt.pause(0.1)
+  plt.pause(0.01)
   ax[0].lines[0].remove()
   plt.cla()
   y[0] = y[0] + 0.1
