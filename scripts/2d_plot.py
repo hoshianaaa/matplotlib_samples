@@ -2,20 +2,27 @@
 import matplotlib.pyplot as plt
  
 # データを用意
+
 y = [1, 2, 1, 2,1]
 x = range(0,len(y))
- 
+fig, ax = plt.subplots(nrows=6,ncols=1)
+
+while True:
 # 描画オブジェクト（fig）とサブプロット（ax）を生成する
-fig, ax = plt.subplots()
- 
+   
 # 折れ線グラフ表示
-ax.plot(x, y)
+  ax[0].plot(x, y)
 # グラフにタイトルをつける
-ax.set_title('テストタイトル',fontname='Meiryo')
+  ax[0].set_title('sample',fontname='Meiryo')
 # x軸の軸ラベルを設定
-plt.xlabel('x')
+  plt.xlabel('x')
 # y軸の軸ラベルを設定
-plt.ylabel('y')
- 
+  plt.ylabel('y')
+   
 # グラフを表示
-plt.show()
+#plt.show()
+  plt.pause(0.1)
+  ax[0].lines[0].remove()
+  plt.cla()
+  y[0] = y[0] + 0.1
+  print(y)
