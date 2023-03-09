@@ -3,8 +3,9 @@ import matplotlib.pyplot as plt
  
 # データを用意
 
-y = [1, 2, 1, 2,1]
-x = range(0,len(y))
+y = [1, 255, 255, 255,255, 0]
+x = list(range(0,len(y)))
+print(x)
 fig, ax = plt.subplots(nrows=6,ncols=1)
 
 while True:
@@ -25,4 +26,4 @@ while True:
   ax[0].lines[0].remove()
   plt.cla()
   y[0] = y[0] + 0.1
-  print(y)
+  print(x,y)
